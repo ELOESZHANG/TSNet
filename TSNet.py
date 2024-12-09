@@ -651,10 +651,10 @@ class SubNet(nn.Module):
 
 
 @NET_REGISTRY.register()
-class SS2DNet2(nn.Module):
+class TSNet(nn.Module):
     def __init__(self, in_c=3, out_c=1, n_feat=10, scale_unetfeats=20, scale_subnetfeats=16, num_cab=8, kernel_size=3,
                  reduction=4, bias=False):
-        super(SS2DNet2, self).__init__()
+        super(TSNet, self).__init__()
         act = nn.PReLU()
         self.shallow_feat1 = nn.Sequential(conv(in_c, n_feat, kernel_size, bias=bias),
                                            CAB(n_feat, kernel_size, reduction, bias=bias, act=act))
@@ -783,7 +783,7 @@ class SS2DNet2(nn.Module):
 
 if __name__ == '__main__':
     x = torch.randn(1, 3, 512, 512).cuda()
-    model = SS2DNet2().cuda()
+    model = TSNet().cuda()
     res = model(x)
     # print(res)
     print(res[0].shape)
