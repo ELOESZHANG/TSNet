@@ -8,7 +8,7 @@ IRSTD - 1K：https://github.com/RuiZhang97/ISNet
 NUDT - SIRST：https://github.com/YeRen123455/Infrared-Small-Target-Detection
 
 ## Referrences
-*This code is highly borrowed from [ACM](https://github.com/wcyjerry/BasicISOS). Thanks to  wcyjerry.
+*This code is highly borrowed from [BasicISOS](https://github.com/wcyjerry/BasicISOS). Thanks to  wcyjerry.
 
 
 ## Instructions for Code Usage:
