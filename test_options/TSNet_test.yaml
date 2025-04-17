@@ -1,0 +1,30 @@
+dataset:
+  test:
+    name: &name SIRST
+    type: Dataset_test
+#    data_root: ./basicseg/data/dataset/SIRST/test
+    data_root: ./basicseg/data/dataset/IRSTD/test
+#    data_root: ./basicseg/data/dataset/NUDT-SIRST/test
+    img_sz: 512
+    get_name: True
+
+exp:
+  #The path where the test results are saved
+  save_dir: ./basicseg/data/generate/NUDT-SIRST/
+  #batch_size
+  bs: 1
+  device: 1
+  #num_workers
+  nw: 1
+
+model:
+  net:
+    type: TSNet
+
+resume:
+#    net_path: ./experiment/v3/20241124_225457/models/net_best_norm.pth # SIRST
+#    net_path: ./experiment/v3/20241126_150528/models/net_best_norm.pth # IRSTD
+#    net_path: ./experiment/v2025/20250331_160819/models/net_best_mean.pth  # NUDT-SIRST
+#    net_path: ./pre_train/NUDT-IRST/net_best_norm.pth
+#    net_path: ./pre_train/SIRST/net_best_norm.pth
+    net_path: ./pre_train/IRSTD/net_best_norm.pth
